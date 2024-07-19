@@ -16,7 +16,7 @@ const HomeScreen = () => {
                     <Text style={styles.loginBtnText}>Log-In</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.signinBtnWrapper}>
-                    <Text style={styles.loginBtnText}>Sign-Up</Text>
+                    <Text style={styles.signinBtnText}>Sign-Up</Text>
                 </TouchableOpacity>
             </View>
                 
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     logo: {
         height: 60,
         width: 180,
-        marginTop: 30,
+        marginTop: 25,
         marginBottom: 80,
     },
 
@@ -48,14 +48,14 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 40,
+        fontSize: 50,
         fontFamily: fonts.Regular,
         color: 'black',
     },
 
     subtitle: {
         fontFamily:fonts.Regular,
-        fontSize: 30,
+        fontSize: 35,
         color: "darkblue",
     },
 
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: "black",
         width: "90%",
-        height: 60,
+        height: 70,
         marginTop: 50,
         borderRadius: 100,
     },
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     loginBtnWrapper: {
         alignItems: "center",
         justifyContent: "center",
-        width: "50%",
+        width: "55%",
         backgroundColor: "black",
         borderRadius: 100,
     },
@@ -84,8 +84,16 @@ const styles = StyleSheet.create({
     },
 
     signinBtnWrapper: {
-
+        alignItems: "center",
+        justifyContent: "center",
+        width: "40%",
     },
+
+    signinBtnText: {
+        color: "black",
+        fontSize: 20,
+        fontFamily: fonts.Bold,
+    }
 
 })
 
