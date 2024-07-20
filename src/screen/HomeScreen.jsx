@@ -10,6 +10,10 @@ const HomeScreen = () => {
     const handleLogin = () => {
         navigation.navigate("LOGIN");
     };
+
+    const handleSignUp = () => {
+        navigation.navigate("SIGNUP");
+    };
     return (
         <View style={styles.container}>
             <Image source={require("../assets/Logo.png")} style={styles.logo} />
@@ -21,13 +25,15 @@ const HomeScreen = () => {
                 <TouchableOpacity style={styles.loginBtnWrapper} onPress={handleLogin}>
                     <Text style={styles.loginBtnText}>Log-In</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.signinBtnWrapper}>
+                <TouchableOpacity style={styles.signinBtnWrapper} onPress={handleSignUp}>
                     <Text style={styles.signinBtnText}>Sign-Up</Text>
                 </TouchableOpacity>
             </View>
         </View>
     );
 };
+
+// user accept
 
 export default HomeScreen
 
@@ -40,10 +46,10 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-        height: 60,
+        height: 70,
         width: 180,
-        marginTop: 25,
-        marginBottom: 60,
+        marginTop: 20,
+        marginBottom: 50,
     },
 
     group: {

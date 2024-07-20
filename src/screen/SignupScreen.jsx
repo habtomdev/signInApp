@@ -12,6 +12,10 @@ const LoginScreen = () => {
     const handleGoBack = () => {
         navigation.goBack();
     };
+
+    const handleLogin = () => {
+        navigation.navigate("LOGIN")
+    };
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.backBtnWrapper}
@@ -22,8 +26,8 @@ const LoginScreen = () => {
             </TouchableOpacity>
             <View style={styles.textContainer}>
                 <Text style={styles.text1}>Hello, </Text>
-                <Text style={styles.text2}>Welcome </Text>
-                <Text style={styles.text3}>Back </Text>
+                <Text style={styles.text2}>Let's </Text>
+                <Text style={styles.text3}>Get Started </Text>
             </View>
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
@@ -32,6 +36,14 @@ const LoginScreen = () => {
                         color="black"
                     />
                     <TextInput style={styles.textInput} placeholder='Please write your email'
+                    placeholderTextColor={colors.gray}/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Entypo name={"phone"}
+                        size={23}
+                        color="black"
+                    />
+                    <TextInput style={styles.textInput} placeholder='Phone No'
                     placeholderTextColor={colors.gray}/>
                 </View>
                 <View style={styles.inputContainer}>
@@ -44,11 +56,14 @@ const LoginScreen = () => {
                     secureTextEntry={true}/>
                 </View>
                 <TouchableOpacity>
-                    <Text style={styles.forgotPass}>Forgot Password?</Text>
+                    <Text style={styles.loginBtn}>Sign-Up</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text style={styles.loginBtn}>Login</Text>
-                </TouchableOpacity>
+                <View style={styles.loginBackContainer}>
+                    <Text style={styles.loginBackText}>Already have an account?</Text>
+                    <TouchableOpacity>
+                    <Text style={styles.loginBack} onPress={handleLogin}>Login</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
     )
@@ -132,5 +147,23 @@ const styles = StyleSheet.create({
         backgroundColor: "black",
         color: "white",
         fontFamily: fonts.Medium
+    },
+
+    loginBackContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        marginTop: 20,
+    },
+
+    loginBack: {
+        fontSize:18,
+        color: "black",
+        fontFamily: fonts.Medium
+    },
+
+    loginBackText: {
+        fontSize:18,
+        color: "black",
+        paddingRight: 10
     }
 })
